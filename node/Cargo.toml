@@ -1,0 +1,190 @@
+[dependencies]
+futures = '0.3.4'
+jsonrpc-core = '15.0.0'
+jsonrpc-pubsub = '15.0.0'
+log = '0.4.8'
+structopt = '0.3.8'
+
+[dependencies.fc-consensus]
+git = 'https://github.com/paritytech/frontier.git'
+rev = '2a021f69a2db02106c82c018fac637b647a2b13c'
+
+[dependencies.fc-db]
+git = 'https://github.com/paritytech/frontier.git'
+rev = '2a021f69a2db02106c82c018fac637b647a2b13c'
+
+[dependencies.fc-mapping-sync]
+git = 'https://github.com/paritytech/frontier.git'
+rev = '2a021f69a2db02106c82c018fac637b647a2b13c'
+
+[dependencies.fc-rpc]
+git = 'https://github.com/paritytech/frontier.git'
+rev = '2a021f69a2db02106c82c018fac637b647a2b13c'
+
+[dependencies.fc-rpc-core]
+git = 'https://github.com/paritytech/frontier.git'
+rev = '2a021f69a2db02106c82c018fac637b647a2b13c'
+
+[dependencies.fp-consensus]
+git = 'https://github.com/paritytech/frontier.git'
+rev = '2a021f69a2db02106c82c018fac637b647a2b13c'
+
+[dependencies.fp-rpc]
+git = 'https://github.com/paritytech/frontier.git'
+rev = '2a021f69a2db02106c82c018fac637b647a2b13c'
+
+[dependencies.frame-benchmarking]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.frame-benchmarking-cli]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.frontier-template-runtime]
+default-features = false
+features = ['std']
+path = '../runtime'
+
+[dependencies.pallet-dynamic-fee]
+git = 'https://github.com/paritytech/frontier.git'
+rev = '2a021f69a2db02106c82c018fac637b647a2b13c'
+
+[dependencies.pallet-ethereum]
+git = 'https://github.com/paritytech/frontier.git'
+rev = '2a021f69a2db02106c82c018fac637b647a2b13c'
+
+[dependencies.pallet-evm]
+git = 'https://github.com/paritytech/frontier.git'
+rev = '2a021f69a2db02106c82c018fac637b647a2b13c'
+
+[dependencies.pallet-transaction-payment-rpc]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-basic-authorship]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-cli]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-client-api]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-consensus]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-consensus-aura]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-consensus-manual-seal]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-executor]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-finality-grandpa]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-network]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-rpc]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-rpc-api]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-service]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-telemetry]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sc-transaction-pool]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sp-api]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sp-block-builder]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sp-blockchain]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sp-consensus]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sp-consensus-aura]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sp-core]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sp-finality-grandpa]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sp-inherents]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sp-runtime]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sp-timestamp]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.sp-transaction-pool]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[dependencies.substrate-frame-rpc-system]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[features]
+aura = ['frontier-template-runtime/aura']
+default = ['aura']
+manual-seal = ['frontier-template-runtime/manual-seal']
+runtime-benchmarks = ['frontier-template-runtime/runtime-benchmarks']
+[build-dependencies.substrate-build-script-utils]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
+[package]
+authors = ['Parity Technologies <admin@parity.io>']
+build = 'build.rs'
+description = 'Frontier Node template'
+edition = '2018'
+homepage = 'https://substrate.dev'
+license = 'Unlicense'
+name = 'frontier-template-node'
+publish = false
+repository = 'https://github.com/paritytech/frontier/'
+version = '0.0.0'
+[package.metadata.docs.rs]
+targets = ['x86_64-unknown-linux-gnu']
