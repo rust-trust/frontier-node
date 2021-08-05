@@ -7,7 +7,7 @@ version = '2.0.0'
 [dependencies.fp-rpc]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '76452a7e2ea7cb7e30d44c518a88104e818b2651'
+rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
 
 [dependencies.frame-benchmarking]
 branch = 'frontier'
@@ -61,32 +61,32 @@ version = '3.0.0-dev'
 [dependencies.pallet-dynamic-fee]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '76452a7e2ea7cb7e30d44c518a88104e818b2651'
+rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
 
 [dependencies.pallet-ethereum]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '76452a7e2ea7cb7e30d44c518a88104e818b2651'
+rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
 
 [dependencies.pallet-evm]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '76452a7e2ea7cb7e30d44c518a88104e818b2651'
+rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
 
 [dependencies.pallet-evm-precompile-modexp]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '76452a7e2ea7cb7e30d44c518a88104e818b2651'
+rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
 
 [dependencies.pallet-evm-precompile-sha3fips]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '76452a7e2ea7cb7e30d44c518a88104e818b2651'
+rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
 
 [dependencies.pallet-evm-precompile-simple]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '76452a7e2ea7cb7e30d44c518a88104e818b2651'
+rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
 
 [dependencies.pallet-grandpa]
 branch = 'frontier'
