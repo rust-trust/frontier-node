@@ -1,3 +1,20 @@
+[package]
+authors = ['Parity Technologies <admin@parity.io>']
+edition = '2018'
+homepage = 'https://substrate.dev'
+license = 'Unlicense'
+name = 'frontier-template-runtime'
+publish = false
+repository = 'https://github.com/paritytech/frontier/'
+version = '0.0.0'
+
+[package.metadata.docs.rs]
+targets = ['x86_64-unknown-linux-gnu']
+
+[build-dependencies.substrate-wasm-builder]
+branch = 'frontier'
+git = 'https://github.com/paritytech/substrate.git'
+
 [dependencies.codec]
 default-features = false
 features = ['derive']
@@ -7,7 +24,7 @@ version = '2.0.0'
 [dependencies.fp-rpc]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.frame-benchmarking]
 branch = 'frontier'
@@ -61,32 +78,32 @@ version = '3.0.0-dev'
 [dependencies.pallet-dynamic-fee]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.pallet-ethereum]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.pallet-evm]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.pallet-evm-precompile-modexp]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.pallet-evm-precompile-sha3fips]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.pallet-evm-precompile-simple]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.pallet-grandpa]
 branch = 'frontier'
@@ -248,18 +265,3 @@ std = [
     'frame-benchmarking/std',
     'frame-system-benchmarking/std',
 ]
-[build-dependencies.substrate-wasm-builder]
-branch = 'frontier'
-git = 'https://github.com/paritytech/substrate.git'
-
-[package]
-authors = ['Parity Technologies <admin@parity.io>']
-edition = '2018'
-homepage = 'https://substrate.dev'
-license = 'Unlicense'
-name = 'frontier-template-runtime'
-publish = false
-repository = 'https://github.com/paritytech/frontier/'
-version = '0.0.0'
-[package.metadata.docs.rs]
-targets = ['x86_64-unknown-linux-gnu']

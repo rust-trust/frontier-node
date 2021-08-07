@@ -1,3 +1,17 @@
+[package]
+authors = ['Parity Technologies <admin@parity.io>']
+build = 'build.rs'
+description = 'Frontier Node template'
+edition = '2018'
+homepage = 'https://substrate.dev'
+license = 'Unlicense'
+name = 'frontier-template-node'
+publish = false
+repository = 'https://github.com/paritytech/frontier/'
+version = '0.0.0'
+[package.metadata.docs.rs]
+targets = ['x86_64-unknown-linux-gnu']
+
 [dependencies]
 futures = '0.3.4'
 jsonrpc-core = '15.0.0'
@@ -7,31 +21,31 @@ structopt = '0.3.8'
 
 [dependencies.fc-consensus]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.fc-db]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.fc-mapping-sync]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.fc-rpc]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.fc-rpc-core]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.fp-consensus]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.fp-rpc]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.frame-benchmarking]
 branch = 'frontier'
@@ -48,15 +62,15 @@ path = '../runtime'
 
 [dependencies.pallet-dynamic-fee]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.pallet-ethereum]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.pallet-evm]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '4ac04b135fe165ae48a285c244666e3020296cb6'
+rev = 'd5bc53ea3cb92cc16ced47c20aed79afd67dfd2a'
 
 [dependencies.pallet-transaction-payment-rpc]
 branch = 'frontier'
@@ -174,17 +188,3 @@ runtime-benchmarks = ['frontier-template-runtime/runtime-benchmarks']
 [build-dependencies.substrate-build-script-utils]
 branch = 'frontier'
 git = 'https://github.com/paritytech/substrate.git'
-
-[package]
-authors = ['Parity Technologies <admin@parity.io>']
-build = 'build.rs'
-description = 'Frontier Node template'
-edition = '2018'
-homepage = 'https://substrate.dev'
-license = 'Unlicense'
-name = 'frontier-template-node'
-publish = false
-repository = 'https://github.com/paritytech/frontier/'
-version = '0.0.0'
-[package.metadata.docs.rs]
-targets = ['x86_64-unknown-linux-gnu']
