@@ -25,10 +25,6 @@ git = 'https://github.com/paritytech/substrate.git'
 branch = 'frontier'
 git = 'https://github.com/paritytech/substrate.git'
 
-[dependencies.sc-light]
-branch = 'frontier'
-git = 'https://github.com/paritytech/substrate.git'
-
 [dependencies.sp-api]
 branch = 'frontier'
 git = 'https://github.com/paritytech/substrate.git'

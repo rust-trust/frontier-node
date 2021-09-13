@@ -14,19 +14,6 @@ pub type Backend = substrate_test_client::Backend<runtime::opaque::Block>;
 
 pub type Executor = client::LocalCallExecutor<Backend, NativeExecutor<LocalExecutor>>;
 
-pub type LightBackend = substrate_test_client::LightBackend<runtime::opaque::Block>;
-
-pub type LightExecutor = sc_light::GenesisCallExecutor<
-	LightBackend,
-	client::LocalCallExecutor<
-		sc_light::Backend<
-			sc_client_db::light::LightStorage<runtime::opaque::Block>,
-			HashFor<runtime::opaque::Block>,
-		>,
-		NativeExecutor<LocalExecutor>,
-	>,
->;
-
 /// Parameters of test-client builder with test-runtime.
 #[derive(Default)]
 pub struct GenesisParameters;
