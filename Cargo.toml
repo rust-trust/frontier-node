@@ -1,8 +1,8 @@
+[profile.release]
+panic = 'unwind'
+
 [workspace]
 members = [
     'node',
     'runtime',
-    'test-utils/client',
 ]
-[profile.release]
-panic = 'unwind'
