@@ -1,14 +1,205 @@
 [package]
 authors = ['Substrate DevHub <https://github.com/substrate-developer-hub>']
-edition = '2018'
-homepage = 'https://substrate.dev'
+edition = '2021'
+homepage = 'https://substrate.io'
 license = 'Unlicense'
 name = 'frontier-template-runtime'
 publish = false
 repository = 'https://github.com/substrate-developer-hub/frontier-node-template/'
-version = '0.0.1'
+version = '0.0.0'
+
 [package.metadata.docs.rs]
 targets = ['x86_64-unknown-linux-gnu']
+
+[build-dependencies.substrate-wasm-builder]
+branch = 'master'
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.codec]
+default-features = false
+features = ['derive']
+package = 'parity-scale-codec'
+version = '3.0.0'
+
+[dependencies.fp-rpc]
+default-features = false
+git = 'https://github.com/paritytech/frontier.git'
+
+[dependencies.fp-self-contained]
+default-features = false
+git = 'https://github.com/paritytech/frontier.git'
+
+[dependencies.frame-benchmarking]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+optional = true
+
+[dependencies.frame-executive]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.frame-support]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.frame-system]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.frame-system-benchmarking]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+optional = true
+
+[dependencies.frame-system-rpc-runtime-api]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.pallet-aura]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.pallet-balances]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.pallet-base-fee]
+default-features = false
+git = 'https://github.com/paritytech/frontier.git'
+
+[dependencies.pallet-dynamic-fee]
+default-features = false
+git = 'https://github.com/paritytech/frontier.git'
+
+[dependencies.pallet-ethereum]
+default-features = false
+git = 'https://github.com/paritytech/frontier.git'
+
+[dependencies.pallet-evm]
+default-features = false
+git = 'https://github.com/paritytech/frontier.git'
+
+[dependencies.pallet-evm-precompile-modexp]
+default-features = false
+git = 'https://github.com/paritytech/frontier.git'
+
+[dependencies.pallet-evm-precompile-sha3fips]
+default-features = false
+git = 'https://github.com/paritytech/frontier.git'
+
+[dependencies.pallet-evm-precompile-simple]
+default-features = false
+git = 'https://github.com/paritytech/frontier.git'
+
+[dependencies.pallet-grandpa]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.pallet-randomness-collective-flip]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.pallet-sudo]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.pallet-timestamp]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.pallet-transaction-payment]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.pallet-transaction-payment-rpc-runtime-api]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.scale-info]
+default-features = false
+features = ['derive']
+version = '2.0.0'
+
+[dependencies.serde]
+features = ['derive']
+optional = true
+version = '1.0.101'
+
+[dependencies.sp-api]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.sp-block-builder]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.sp-consensus-aura]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.sp-core]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.sp-inherents]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.sp-io]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.sp-offchain]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.sp-runtime]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.sp-session]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.sp-std]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+version = '4.0.0'
+
+[dependencies.sp-transaction-pool]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
+[dependencies.sp-version]
+branch = 'master'
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+version = '5.0.0'
 
 [features]
 aura = []
@@ -21,29 +212,13 @@ runtime-benchmarks = [
     'frame-benchmarking',
     'frame-system-benchmarking',
     'frame-system/runtime-benchmarks',
+    'pallet-ethereum/runtime-benchmarks',
     'pallet-evm/runtime-benchmarks',
 ]
 std = [
-    'codec/std',
     'serde',
-    'frame-executive/std',
-    'frame-support/std',
-    'frame-system-rpc-runtime-api/std',
-    'frame-system/std',
-    'fp-rpc/std',
-    'pallet-ethereum/std',
-    'pallet-evm/std',
-    'pallet-dynamic-fee/std',
-    'pallet-evm-precompile-simple/std',
-    'pallet-evm-precompile-sha3fips/std',
-    'pallet-aura/std',
-    'pallet-balances/std',
-    'pallet-grandpa/std',
-    'pallet-randomness-collective-flip/std',
-    'pallet-sudo/std',
-    'pallet-timestamp/std',
-    'pallet-transaction-payment-rpc-runtime-api/std',
-    'pallet-transaction-payment/std',
+    'codec/std',
+    'scale-info/std',
     'sp-api/std',
     'sp-block-builder/std',
     'sp-consensus-aura/std',
@@ -56,160 +231,24 @@ std = [
     'sp-std/std',
     'sp-transaction-pool/std',
     'sp-version/std',
-    'frame-benchmarking/std',
-    'frame-system-benchmarking/std',
+    'frame-executive/std',
+    'frame-support/std',
+    'frame-system-rpc-runtime-api/std',
+    'frame-system/std',
+    'pallet-aura/std',
+    'pallet-balances/std',
+    'pallet-grandpa/std',
+    'pallet-randomness-collective-flip/std',
+    'pallet-sudo/std',
+    'pallet-timestamp/std',
+    'pallet-transaction-payment-rpc-runtime-api/std',
+    'pallet-transaction-payment/std',
+    'fp-rpc/std',
+    'fp-self-contained/std',
+    'pallet-base-fee/std',
+    'pallet-dynamic-fee/std',
+    'pallet-ethereum/std',
+    'pallet-evm/std',
+    'pallet-evm-precompile-simple/std',
+    'pallet-evm-precompile-sha3fips/std',
 ]
-[dependencies.codec]
-default-features = false
-features = ['derive']
-package = 'parity-scale-codec'
-version = '2.0.0'
-
-[dependencies.fp-rpc]
-default-features = false
-git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
-
-[dependencies.frame-benchmarking]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-optional = true
-
-[dependencies.frame-executive]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.frame-support]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.frame-system]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-package = 'frame-system'
-
-[dependencies.frame-system-benchmarking]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-optional = true
-
-[dependencies.frame-system-rpc-runtime-api]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.pallet-aura]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.pallet-balances]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.pallet-dynamic-fee]
-default-features = false
-git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
-
-[dependencies.pallet-ethereum]
-default-features = false
-git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
-
-[dependencies.pallet-evm]
-default-features = false
-git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
-
-[dependencies.pallet-evm-precompile-modexp]
-default-features = false
-git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
-
-[dependencies.pallet-evm-precompile-sha3fips]
-default-features = false
-git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
-
-[dependencies.pallet-evm-precompile-simple]
-default-features = false
-git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
-
-[dependencies.pallet-grandpa]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.pallet-randomness-collective-flip]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.pallet-sudo]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.pallet-timestamp]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.pallet-transaction-payment]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.pallet-transaction-payment-rpc-runtime-api]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.serde]
-features = ['derive']
-optional = true
-version = '1.0.101'
-
-[dependencies.sp-api]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.sp-block-builder]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.sp-consensus-aura]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.sp-core]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.sp-inherents]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.sp-io]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.sp-offchain]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.sp-runtime]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.sp-session]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.sp-std]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.sp-transaction-pool]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-
-[dependencies.sp-version]
-default-features = false
-git = 'https://github.com/paritytech/substrate'
-[build-dependencies.substrate-wasm-builder]
-git = 'https://github.com/paritytech/substrate'
