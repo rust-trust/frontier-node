@@ -1,6 +1,6 @@
 # Substrate Frontier Node Template
 
-A [FRAME](https://substrate.dev/docs/en/next/conceptual/runtime/frame)-based
+A [FRAME](https://docs.substrate.io/v3/runtime/frame/)-based
 [Substrate](https://substrate.dev/en/) node with the Ethereum RPC support, ready for hacking
 :rocket:
 
